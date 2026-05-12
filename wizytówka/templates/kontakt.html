@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,17 @@
 
 <h2>Kontakt</h2>
 
-<p><strong>email:</strong> jan.kowalski@example.com</p>
-<p><strong>telefon:</strong> 123-456-789</p>
+<ul>
+        <li><strong>Email:</strong> jan.kowalski@example.com</li>
+        <li><strong>Telefon:</strong> 123-456-789</li>
+</ul>
 
-<form>
-    <label for="message">Wyślij wiadomość:</label><br>
+<form action="/kontakt" method="post">
+    <label for="message">Wiadomość:</label><br>
     <textarea id="message" name="message" rows="4" cols="40"></textarea><br>
-    <input type="submit" value="Prześlij">
+    <input type="submit" value="Wyślij">
 </form>
+
 
 </body>
 </html>

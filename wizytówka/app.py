@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,8 +6,11 @@ app = Flask(__name__)
 def o_mnie():
     return render_template('o_mnie.html')
 
-@app.route('/kontakt')
+@app.route('/kontakt', methods=['GET', 'POST'])
 def kontakt():
+    if request.method == 'POST':
+        message = request.form.get('message')
+        print("Otrzymano wiadomość:", message)
     return render_template('kontakt.html')
 
 if __name__ == '__main__':
